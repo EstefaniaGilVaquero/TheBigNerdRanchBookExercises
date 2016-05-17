@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    
     //IBVARIABLES
     
     let questions: [String] = ["From what is cognac made?","What is 7+7?","What is the capital of Vermont?"]
@@ -46,6 +45,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         questionLabel.text = questions[currentQuestionIndex]
+    }
     
 }
-
