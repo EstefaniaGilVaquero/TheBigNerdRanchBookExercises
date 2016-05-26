@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,56 +18,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="212" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyL-UU-i6Z">
-                                <rect key="frame" x="245" y="28" width="111" height="84"/>
-                                <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aa-zZ-6b4">
-                                <rect key="frame" x="172" y="120" width="256" height="36"/>
+                                <rect key="frame" x="172" y="100" width="256" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGU-gP-Rht">
-                                <rect key="frame" x="250" y="164" width="100" height="36"/>
+                                <rect key="frame" x="250" y="144" width="100" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTx-PR-9kq">
-                                <rect key="frame" x="242" y="208" width="117" height="84"/>
+                                <rect key="frame" x="242" y="188" width="117" height="84"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPz-8f-UUK">
-                                <rect key="frame" x="194" y="300" width="212" height="36"/>
+                                <rect key="frame" x="194" y="280" width="212" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ih8-PY-EU0">
+                                <rect key="frame" x="175" y="8" width="250" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="0Bu-pg-ahK"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="OyL-UU-i6Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2VY-me-3nh"/>
-                            <constraint firstItem="5aa-zZ-6b4" firstAttribute="top" secondItem="OyL-UU-i6Z" secondAttribute="bottom" constant="8" id="7C1-Xf-eaN"/>
-                            <constraint firstItem="xPz-8f-UUK" firstAttribute="centerX" secondItem="5aa-zZ-6b4" secondAttribute="centerX" id="Gy6-Hu-5q6"/>
-                            <constraint firstItem="xPz-8f-UUK" firstAttribute="top" secondItem="fTx-PR-9kq" secondAttribute="bottom" constant="8" id="L5h-fs-CbT"/>
-                            <constraint firstItem="kGU-gP-Rht" firstAttribute="centerX" secondItem="5aa-zZ-6b4" secondAttribute="centerX" id="O3d-qi-gVc"/>
-                            <constraint firstItem="fTx-PR-9kq" firstAttribute="top" secondItem="kGU-gP-Rht" secondAttribute="bottom" constant="8" id="O5f-MF-Awb"/>
-                            <constraint firstItem="OyL-UU-i6Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ZnC-M9-foV"/>
-                            <constraint firstItem="fTx-PR-9kq" firstAttribute="centerX" secondItem="5aa-zZ-6b4" secondAttribute="centerX" id="bUa-Ti-uGI"/>
-                            <constraint firstItem="OyL-UU-i6Z" firstAttribute="centerX" secondItem="5aa-zZ-6b4" secondAttribute="centerX" id="maR-WK-5vS"/>
-                            <constraint firstItem="kGU-gP-Rht" firstAttribute="top" secondItem="5aa-zZ-6b4" secondAttribute="bottom" constant="8" id="wCn-Yy-X9D"/>
+                            <constraint firstItem="ih8-PY-EU0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="8" id="0If-la-56p"/>
+                            <constraint firstItem="kGU-gP-Rht" firstAttribute="top" secondItem="5aa-zZ-6b4" secondAttribute="bottom" constant="8" id="0h1-wX-yrf"/>
+                            <constraint firstItem="fTx-PR-9kq" firstAttribute="centerX" secondItem="ih8-PY-EU0" secondAttribute="centerX" id="CQH-qS-cbm"/>
+                            <constraint firstItem="5aa-zZ-6b4" firstAttribute="top" secondItem="ih8-PY-EU0" secondAttribute="bottom" constant="8" id="Dh6-6D-6Y9"/>
+                            <constraint firstItem="5aa-zZ-6b4" firstAttribute="centerX" secondItem="ih8-PY-EU0" secondAttribute="centerX" id="FZX-Ny-Roh"/>
+                            <constraint firstItem="xPz-8f-UUK" firstAttribute="centerX" secondItem="ih8-PY-EU0" secondAttribute="centerX" id="GTd-Q0-I20"/>
+                            <constraint firstItem="xPz-8f-UUK" firstAttribute="top" secondItem="fTx-PR-9kq" secondAttribute="bottom" constant="8" id="Ozr-JA-IV1"/>
+                            <constraint firstItem="fTx-PR-9kq" firstAttribute="top" secondItem="kGU-gP-Rht" secondAttribute="bottom" constant="8" id="aRC-uL-H56"/>
+                            <constraint firstItem="kGU-gP-Rht" firstAttribute="centerX" secondItem="ih8-PY-EU0" secondAttribute="centerX" id="qe4-oV-ktq"/>
+                            <constraint firstItem="ih8-PY-EU0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rV9-ir-yrj"/>
+                            <constraint firstItem="ih8-PY-EU0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="8" id="t4o-xp-wmK"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="564.5" y="438.5"/>
+            <point key="canvasLocation" x="564" y="438"/>
         </scene>
     </scenes>
 </document>
