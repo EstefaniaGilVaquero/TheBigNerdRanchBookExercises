@@ -11,11 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     
     
+    
+    
     //MARK: - LIFE VC
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Hola mundo")
         print("Hola chicos")
+        print("otra prueba de consola")
     }
 
     override func didReceiveMemoryWarning() {
