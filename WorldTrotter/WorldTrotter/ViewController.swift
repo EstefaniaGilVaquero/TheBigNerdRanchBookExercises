@@ -9,7 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    //MARK: - LIFE VC
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("Hola mundo")
+    }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 
 
 
