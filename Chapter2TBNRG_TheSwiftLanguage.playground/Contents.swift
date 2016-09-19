@@ -80,6 +80,86 @@ if let r1 = reading11, r2 = reading22, r3 = reading33 {
     let errorString = "El instrumento a devuleto una lectura que es nil"
 }
 
+//INDEXANDO DICCIONARIOS
+//Indexar un diccionario fuera de sus limites devuelve un nil, por eso es comun usar if-let cuando se accede a un diccionario
+
+let nameByParkingSpace = [13: "Alice", 27:"Bob"]
+let space13Assignee: String? = nameByParkingSpace[13]
+let space42Assignee: String? = nameByParkingSpace[42]
+
+if let space13Assignee = nameByParkingSpace[13]{
+    print("key 13 is assigned in the dictionary!")
+}
+
+//BUCLES E INTERPOLACION DE STRINGS
+//Swift admite el bucle tipo C tradicional
+//Comentado pq da error al estar deprecated
+//for var i = 0; i < countingUp.count; ++i {
+//    let string = countingUp[i]
+//    //Use string
+//}
+
+//Pero una forma mas sencilla y limpia de hacerlo seria
+
+//let range = 0..<; countingUp.count
+//for i in range {
+//    let string = countingUp[i]
+//    //Use string
+//}
+
+//lo mas directo seria enumerar los objetos en el array por si mismos
+for string in countingUp {
+    //Use string
+}
+
+//si quieres el indice de cada objeto del array
+//la funcion enumerate devuelve una secuencia de enteros y valores
+for (i, string) in countingUp.enumerate() {
+    //(0,"one"), (1,"two")
+}
+
+for (space, name) in nameByParkingSpace {
+    let permit = "Space \(space): \(name)"
+}
+
+//ENUMERACIONES Y SWITCH
+//Un enumeration es un tipo con un pequeño conjunto de valores.
+
+enum PieType {
+    case Apple
+    case Cherry
+    case Pecan
+}
+let favoritePie = PieType.Apple
+
+//switch, los casos de una clausula switch deben ser exaustivos, hay que contemplar cada posible valor de la expression, explicitamente o mediante un caso por defecto
+
+let name: String
+switch favoritePie {
+case .Apple:
+    name = "Apple"
+case .Cherry:
+    name = "Cherry"
+case .Pecan:
+    name = "Pecan"
+}
+
+//La clausula swith puede casar con muchos tipos, incluso rangos
+
+let osxVersion: Int = 11
+switch osxVersion {
+case 0...8:
+    print("A big cat")
+case 9:
+    print("Mavericks")
+case 10:
+    print("Yosemite")
+default:
+    print("Greetings, people of the future! What's new in 10. \(osxVersion)?")
+}
+
+
+
 
 
 
